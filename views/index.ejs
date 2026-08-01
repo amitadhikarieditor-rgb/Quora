@@ -9,10 +9,12 @@
     <h1>QUORA</h1>
    <% for (post of posts){ %>
        <div>
-            <h3>@ <%=post.username%></h3>
+            <h3>@<%=post.username%></h3>
             <h4><%=post.content%></h4>
        </div>
     <%}%>
+
+    <button><a href="http://localhost:8080/posts/new">Create new post</a></button>
 
     <script src="index.js"></script>
 </body>

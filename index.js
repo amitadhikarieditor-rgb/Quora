@@ -32,3 +32,11 @@ app.listen(port,(req,res)=>{
 app.get("/posts",(req,res)=>{
     res.render("index.ejs",{posts});
 });
+app.get("/posts/new",(req,res)=>{
+    res.render("new.ejs");
+});
+
+app.post("/posts",(req,res)=>{
+    posts.push(req.body);
+    res.redirect("/posts");
+});
