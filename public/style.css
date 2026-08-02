@@ -1,0 +1,16 @@
+*{
+    background-color: #0a0a0a;
+    color: #fff;
+}
+
+h1{
+    text-align: center;
+    color:#6e010d;
+}
+
+.card{
+    border: 1px solid #ccc;
+    height:400px;
+    width: 500px;
+    overflow:auto;
+}

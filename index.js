@@ -16,21 +16,21 @@ app.set("views",path.join(__dirname,"views"));
 app.use(express.static(path.join(__dirname,"public")));
 
 let posts =[
-    {
-        id:uuid(),
-    username:"beerbiceps",
-    content:"would you rather",
-    },
-    {
-        id:uuid(),
-        username:"Assam police",
-        content:"jail main daal denge"
-    },
-    {
-        id:uuid(),
-        username:"samay raina",
-        content:"3 FIR "
-    },
+    // {
+    //     id:uuid(),
+    // username:"beerbiceps",
+    // content:"would you rather",
+    // },
+    // {
+    //     id:uuid(),
+    //     username:"Assam police",
+    //     content:"jail main daal denge"
+    // },
+    // {
+    //     id:uuid(),
+    //     username:"samay raina",
+    //     content:"3 FIR "
+    // },
 ]
 app.get("/posts",(req,res)=>{
     res.render("index.ejs",{posts});

@@ -4,23 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>QUORA</h1>
    <% for (post of posts){ %>
-       <div>
+       <div class="card">
             <h3>@<%=post.username%></h3>
             <h4><%=post.content%></h4>
        </div>
-       <button><a href="http://localhost:8080/posts/<%=post.id%>">See in details </a></button> <br/>
+       <button class="btn"><a href="http://localhost:8080/posts/<%=post.id%>">See in details </a></button> <br/>
        <br/>
-       <button><a href="http://localhost:8080/posts/<%=post.id%>/edit">Edit post</a></button>
+       <button class="btn"><a href="http://localhost:8080/posts/<%=post.id%>/edit">Edit post</a></button>
        <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
-            <button type="submit">Delete post</button>
+            <button class="btn" type="submit">Delete post</button>
        </form>
     <%}%>
     <br/>
-    <button><a href="http://localhost:8080/posts/new">Create new post</a></button>
+    <button class="btn"><a href="http://localhost:8080/posts/new">Create new post</a></button>
 
     <script src="index.js"></script>
 </body>
