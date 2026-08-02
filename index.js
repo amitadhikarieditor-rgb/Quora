@@ -1,6 +1,8 @@
 const express=require("express");
 const app=express();
 const path=require("path");
+const {v4:uuid}=require("uuid");
+
 
 const port=8080;
 
@@ -13,14 +15,17 @@ app.use(express.static(path.join(__dirname,"public")));
 
 let posts =[
     {
+        id:uuid(),
     username:"beerbiceps",
     content:"would you rather",
     },
     {
+        id:uuid(),
         username:"Assam police",
         content:"jail main daal denge"
     },
     {
+        id:uuid(),
         username:"samay raina",
         content:"3 FIR "
     },
@@ -37,6 +42,13 @@ app.get("/posts/new",(req,res)=>{
 });
 
 app.post("/posts",(req,res)=>{
-    posts.push(req.body);
+    let {username,content}=req.body;
+    posts.push({id:uuid(),username,content});
     res.redirect("/posts");
+});
+
+app.get("/posts/:id",(req,res)=>{
+    let {id}=req.params;
+    let post=posts.find((post)=>post.id===id);
+    res.render("show.ejs",{post});
 });
