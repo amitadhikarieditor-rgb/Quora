@@ -1,6 +1,5 @@
 *{
-    background-color: #0a0a0a;
-    color: #fff;
+    color: #0b0b0b;
 }
 
 h1{
@@ -9,8 +8,10 @@ h1{
 }
 
 .card{
-    border: 1px solid #ccc;
-    height:400px;
-    width: 500px;
-    overflow:auto;
-}
+    overflow:scroll;
+    overflow-x:hidden;
+    width: 40%;
+    height: 200px;
+    background-color: #8bd5ce80;
+    border-radius: 5px;
+} 
